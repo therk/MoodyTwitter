@@ -1,5 +1,8 @@
 *.py[cod]
 
+# Custom Config Files
+oauth.cfg
+
 # C extensions
 *.so
 

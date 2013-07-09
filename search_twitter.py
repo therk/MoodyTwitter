@@ -5,6 +5,18 @@ import urllib2 as urllib
 import signal
 import sys
 import json
+import ConfigParser
+import os
+
+configFile = 'oauth.cfg'
+if not os.path.isfile(configFile):
+	print "Must have " + configFile + " file. You can create it based on sample_oauth.cfg file."
+	sys.exit(1)
+
+config = ConfigParser.RawConfigParser()
+config.read(configFile)
+
+print config.get('Token', 'key')
 
 if len(sys.argv) == 1:
 	print "Please provide twitter search string as argument"
@@ -17,8 +29,10 @@ def signal_handler(signal, frame):
     sys.exit(2)
 signal.signal(signal.SIGINT, signal_handler)
 
-oauthToken = oauth.Token(key="Enter Access Token Key", secret="Enter Access Token Secret")
-oauthConsumer = oauth.Consumer(key="Enter Consumer Key", secret="Enter Consumer Secret")
+oauthToken = oauth.Token(key=config.get('Token', 'key'), 
+						secret=config.get('Token', 'secret'))
+oauthConsumer = oauth.Consumer(key=config.get('Consumer', 'key'), 
+						secret=config.get('Consumer', 'secret'))
 
 request = oauth.Request.from_consumer_and_token(oauthConsumer,
                                              token=oauthToken,
