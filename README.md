@@ -1,7 +1,7 @@
 MoodyTwitter
 ============
 
-#	Code for CNJ DIG Meetup on Analyze Moody Twitter
+###	Code for CNJ DIG Meetup on Analyze Moody Twitter
 Examples in this project are based on the Twitter assignment in Coursera "Introduction to Data Science" MOOC (https://www.coursera.org/course/datasci)
 
 Files
