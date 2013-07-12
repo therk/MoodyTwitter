@@ -4,6 +4,10 @@ import sys
 import ConfigParser
 import os
 
+import codecs
+
+sys.stdout = codecs.getwriter('utf-16')(sys.stdout)
+
 def getUrlResponse(url):
 	configFile = 'oauth.cfg'
 	if not os.path.isfile(configFile):
