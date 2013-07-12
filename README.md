@@ -23,7 +23,7 @@ Configuration & Installation
 ### Pythong Install
 1.	On Windows use Python 2.7.5 Windows Installer - http://www.python.org/ftp/python/2.7.5/python-2.7.5.msi
 2.	Install easy_install.exe by running https://pypi.python.org/packages/2.7/s/setuptools/setuptools-0.6c11.win32-py2.7.exe#md5=57e1e64f6b7c7f1d2eddfc9746bbaf20
-3.	Install Oauth by running "easy_install.exe oauth2"
+3.	Install Oauth module by running "c:\Python27\Scripts\easy_install.exe oauth2"
 
 ### Twitter Dev Account
 1.	Register on http://dev.twitter.com
