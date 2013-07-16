@@ -6,7 +6,8 @@ import os
 
 import codecs
 
-sys.stdout = codecs.getwriter('utf-16')(sys.stdout)
+# Used on windows to output Unicode character set.
+sys.stdout = codecs.getwriter('utf-8')(sys.stdout)
 
 def getUrlResponse(url):
 	configFile = 'oauth.cfg'
